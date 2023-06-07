@@ -1,0 +1,22 @@
+﻿@model List<Models.Actor>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section Styles{
+    
+}
+
+@section Scripts{
+    
+}
+
+<div>
+    Actors
+    @foreach (var actor in Model)
+    {
+        <div>
+            @actor.Name
+        </div>
+    }
+</div>

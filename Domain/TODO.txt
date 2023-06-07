@@ -1,0 +1,2 @@
+Read Mapster Documentation
+https://github.com/MapsterMapper/Mapster/wiki/Basic-usages

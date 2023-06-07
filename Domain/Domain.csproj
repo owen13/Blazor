@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <RootNamespace>Models</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Mapster" Version="7.2.0" />
+      <PackageReference Include="Mapster.Core" Version="1.2.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.3" />
+      <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Utilities\Utilities.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Maps" />
+    </ItemGroup>
+
+<!--    <Target Name="Mapster" AfterTargets="AfterBuild">-->
+<!--        <Exec WorkingDirectory="$(ProjectDir)" Command="dotnet tool restore" />-->
+<!--        <Exec WorkingDirectory="$(ProjectDir)" Command="dotnet mapster model -a &quot;$(TargetDir)$(ProjectName).dll&quot; -o &quot;DTOs&quot;" />-->
+<!--        <Exec WorkingDirectory="$(ProjectDir)" Command="dotnet mapster extension -a &quot;$(TargetDir)$(ProjectName).dll&quot; -o &quot;Maps&quot;" />-->
+<!--        <Exec WorkingDirectory="$(ProjectDir)" Command="dotnet mapster mapper -a &quot;$(TargetDir)$(ProjectName).dll&quot; -o &quot;Maps&quot;" />-->
+<!--    </Target>-->
+</Project>

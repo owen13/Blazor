@@ -1,0 +1,28 @@
+﻿@namespace Blazor.Components
+
+<select value="@Value" @onchange="Change">
+    @foreach (var item in Items)
+    {
+        <option value="@item.Key">@item.Value</option>
+    }
+</select>
+
+@code {
+    [Parameter]
+    public int Value { get; set; }
+    
+    [Parameter]
+    public KeyValuePair<int, string>[] Items { get; set; }
+    
+    // [Parameter]
+    // public EventCallback<int> OnChange { get; set; }
+    
+    [Parameter]
+    public Action<int> OnChange { get; set; }
+
+    private void Change(ChangeEventArgs e)
+    {
+        //OnChange.InvokeAsync(Convert.ToInt32(e.Value));
+        OnChange?.Invoke(Convert.ToInt32(e.Value));
+    }
+}
